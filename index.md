@@ -10,6 +10,30 @@ Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://j
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
 ```markdown
+/**    
+ * @author 清廉
+ * @date 2021/06/29
+ * @desc 
+ */
+public class Test {
+    static Logger logger = LoggerFactory.getLogger(Test.class );
+    public static void main(String[] args) {
+        
+        logger.info("程序启动");
+        logger.debug("程序启动");
+        logger.warn("程序启动");
+        logger.error("程序启动");
+        long start = System.currentTimeMillis();
+        for (int i=0;i< 100;i++) {
+            System.out.println(i);
+        }
+        a();
+        long end = System.currentTimeMillis();
+        logger.info("程序结束，耗时：" + (end - start) + "ms");
+    }
+    public static void a() {
+        logger.info("程序启动a");
+    }
 Syntax highlighted code block
 
 # Header 1
